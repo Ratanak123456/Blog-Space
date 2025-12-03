@@ -37,15 +37,7 @@ export const metadata = {
     type: "website",
     locale: "en_US",
   },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Workspace News – Real-Time Breaking Updates",
-    description:
-      "Real-time news coverage with fast, trusted, and high-quality articles.",
-    images: ["https://your-news-workspace.com/og-news.png"],
-  },
-
+  
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
