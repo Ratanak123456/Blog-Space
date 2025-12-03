@@ -18,8 +18,13 @@ export const metadata = {
   title: "Workspace News – Real-Time Breaking Updates",
   description:
     "Workspace News delivers real-time breaking news, trending stories, and in-depth articles across technology, politics, entertainment, and world news.",
-  metadataBase: new URL("https://blog-space-inky-sigma.vercel.app"),
+  
+  // Safe metadataBase: uses env variable if exists, otherwise fallback
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://blog-space-inky-sigma.vercel.app"
+  ),
 
+  // Open Graph metadata (Facebook, LinkedIn, etc.)
   openGraph: {
     title: "Workspace News – Real-Time Breaking Updates",
     description:
@@ -28,7 +33,7 @@ export const metadata = {
     siteName: "Workspace News",
     images: [
       {
-        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjfSvfbew3Z_OcpuQBlDhn7WH1oRCDdSeTfOFNijDpH9kCq5FMvCI2vhLCL1D-2Shv_o&usqp=CAU", // your OG image
+        url: "/og-news.png", // local image in /public
         width: 1200,
         height: 630,
         alt: "Workspace News Cover Image",
@@ -37,13 +42,28 @@ export const metadata = {
     type: "website",
     locale: "en_US",
   },
-  
+
+  // Twitter card metadata
+  twitter: {
+    card: "summary_large_image",
+    title: "Workspace News – Real-Time Breaking Updates",
+    description:
+      "Real-time news coverage with fast, trusted, and high-quality articles.",
+    creator: "@WorkspaceNews", // your Twitter handle
+    images: ["/og-news.png"], // same local OG image
+  },
+
+  // Favicon and Apple touch icons
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
 
+  // Web manifest
   manifest: "/site.webmanifest",
+
+  // Optional browser theme color
+  themeColor: "#C86B3F", // matches your accent color
 };
 
 
