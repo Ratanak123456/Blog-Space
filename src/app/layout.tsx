@@ -18,17 +18,17 @@ export const metadata = {
   title: "Workspace News – Real-Time Breaking Updates",
   description:
     "Workspace News delivers real-time breaking news, trending stories, and in-depth articles across technology, politics, entertainment, and world news.",
-  metadataBase: new URL("https://your-news-workspace.com"),
+  metadataBase: new URL("https://blog-space-inky-sigma.vercel.app"),
 
   openGraph: {
     title: "Workspace News – Real-Time Breaking Updates",
     description:
       "Stay informed with real-time breaking news, trending updates, and expert analysis across global categories.",
-    url: "https://your-news-workspace.com",
+    url: "https://blog-space-inky-sigma.vercel.app/",
     siteName: "Workspace News",
     images: [
       {
-        url: "https://your-news-workspace.com/og-news.png", // your OG image
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjfSvfbew3Z_OcpuQBlDhn7WH1oRCDdSeTfOFNijDpH9kCq5FMvCI2vhLCL1D-2Shv_o&usqp=CAU", // your OG image
         width: 1200,
         height: 630,
         alt: "Workspace News Cover Image",
