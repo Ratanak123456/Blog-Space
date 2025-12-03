@@ -1,0 +1,63 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "slug": "technology",
+      "name": "Technology Blog",
+      "description": "Latest trends in web development, programming, and emerging technologies",
+      "category": "technology",
+      "postCount": 2,
+      "featured": true,
+      "color": "#3B82F6",
+      "latestPost": {
+        "slug": "ram-memory-shortage-crunch-market-prices-central-micro-center",
+        "title": "RAM prices are so out of control that stores are selling it like lobster",
+        "publishedAt": "2025-11-25"
+      }
+    },
+    {
+      "id": 2,
+      "slug": "entertainment",
+      "name": "Entertainment Blog",
+      "description": "Latest news and insights from the entertainment world",
+      "category": "entertainment",
+      "postCount": 2,
+      "featured": true,
+      "color": "#8B5CF6",
+      "latestPost": {
+        "slug": "microsoft-rog-xbox-ally-default-game-profiles",
+        "title": "ROG Xbox Ally’s new profiles optimize performance per game for more battery life",
+        "publishedAt": "2025-11-25"
+      }
+    },
+    {
+      "id": 3,
+      "slug": "20251126-climate-change-increasingly-threatens-dynamic-spanish-economy-oecd",
+      "title": "Climate change 'increasingly threatens' dynamic Spanish economy: OECD",
+      "description": "Insights and updates on climate change, sustainability, and environmental issues",
+      "category": "climate",
+      "postCount": 2,
+      "featured": false,
+      "color": "#10B981",
+      "latestPost": {
+        "slug": "developer-productivity-tips",
+        "title": "Developer Productivity Tips and Tricks",
+        "publishedAt": "2025-11-26"
+      }
+    },
+    {
+      "id": 4,
+      "slug": "lifestyle",
+      "name": "Lifestyle",
+      "description": "Tips and inspiration for a balanced and fulfilling lifestyle",
+      "postCount": 2,
+      "featured": false,
+      "color": "#F59E0B",
+      "latestPost": {
+        "slug": "thanksgiving-like-holidays-from-around-the-world",
+        "title": "Thanksgiving-Like Holidays From Around The World",
+        "publishedAt": "2025-11-13"
+      }
+    }
+  ]
+}

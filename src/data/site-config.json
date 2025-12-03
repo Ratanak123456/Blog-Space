@@ -1,0 +1,223 @@
+{
+  "site": {
+    "name": "BlogSpace",
+    "description": "A modern blogging platform for sharing ideas, stories, and knowledge with the world",
+    "url": "https://blogspace.example.com",
+    "language": "en",
+    "locale": "en_US",
+    "timezone": "UTC",
+    "version": "1.0.0"
+  },
+  "organization": {
+    "name": "BlogSpace Inc.",
+    "logo": {
+      "light": "/images/logo-light.svg",
+      "dark": "/images/logo-dark.svg",
+      "alt": "BlogSpace Logo"
+    },
+    "foundationYear": 2023,
+    "contact": {
+      "email": "hello@blogspace.example.com",
+      "phone": "+1-555-0123",
+      "address": "123 Tech Street, San Francisco, CA 94105"
+    }
+  },
+  "social": {
+    "twitter": "https://twitter.com/blogspace",
+    "github": "https://github.com/blogspace",
+    "linkedin": "https://linkedin.com/company/blogspace",
+    "facebook": "https://facebook.com/blogspace"
+  },
+  "navigation": {
+    "header": [
+      {
+        "id": 1,
+        "href": "/",
+        "label": "Home",
+        "type": "page"
+      },
+      {
+        "id": 2,
+        "href": "/blogs",
+        "label": "Blogs"
+      },
+      {
+        "id": 3,
+        "href": "/about",
+        "label": "About",
+        "type": "page"
+      }
+    ],
+
+    "footer": {
+      "columns": [
+        {
+          "title": "Blogs",
+          "links": [
+            { "href": "/blogs/technology", "label": "Technology" },
+            { "href": "/blogs/design", "label": "Design" },
+            { "href": "/blogs/productivity", "label": "Productivity" },
+            { "href": "/blogs/lifestyle", "label": "Lifestyle" }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            { "href": "/about", "label": "About Us" },
+            { "href": "/team", "label": "Our Team" },
+            { "href": "/careers", "label": "Careers" },
+            { "href": "/press", "label": "Press" }
+          ]
+        },
+        {
+          "title": "Support",
+          "links": [
+            { "href": "/help", "label": "Help Center" },
+            { "href": "/contact", "label": "Contact Us" },
+            { "href": "/status", "label": "System Status" },
+            { "href": "/sitemap", "label": "Sitemap" }
+          ]
+        },
+        {
+          "title": "Legal",
+          "links": [
+            { "href": "/privacy", "label": "Privacy Policy" },
+            { "href": "/terms", "label": "Terms of Service" },
+            { "href": "/cookies", "label": "Cookie Policy" },
+            { "href": "/gdpr", "label": "GDPR" }
+          ]
+        }
+      ]
+    }
+  },
+  "features": {
+    "darkMode": true,
+    "search": true,
+    "newsletter": {
+      "enabled": true,
+      "title": "Stay Updated",
+      "description": "Get the latest articles from all our blogs delivered straight to your inbox",
+      "placeholder": "Enter your email address",
+      "buttonText": "Subscribe",
+      "confirmationMessage": "Thanks for subscribing! Please check your email to confirm your subscription."
+    },
+    "comments": {
+      "enabled": true,
+      "provider": "utterances",
+      "config": {
+        "repo": "blogspace/comments",
+        "theme": "github-light"
+      }
+    }
+  },
+  "seo": {
+    "defaultMeta": {
+      "title": "BlogSpace - A Modern Blogging Platform",
+      "description": "Discover amazing content across technology, design, productivity, and lifestyle blogs. Join our community of readers and writers.",
+      "keywords": [
+        "blog",
+        "technology",
+        "design",
+        "productivity",
+        "web development",
+        "programming"
+      ],
+      "author": "BlogSpace Team"
+    },
+    "openGraph": {
+      "type": "website",
+      "siteName": "BlogSpace",
+      "images": [
+        {
+          "url": "/images/og-image.jpg",
+          "width": 1200,
+          "height": 630,
+          "alt": "BlogSpace - A Modern Blogging Platform"
+        }
+      ]
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "site": "@blogspace",
+      "creator": "@blogspace"
+    },
+    "structuredData": {
+      "organization": {
+        "@type": "Organization",
+        "name": "BlogSpace",
+        "url": "https://blogspace.example.com",
+        "logo": "https://blogspace.example.com/images/logo.png",
+        "sameAs": [
+          "https://twitter.com/blogspace",
+          "https://github.com/blogspace",
+          "https://linkedin.com/company/blogspace"
+        ]
+      }
+    }
+  },
+  "analytics": {
+    "googleAnalytics": "G-XXXXXXXXXX",
+    "microsoftClarity": "XXXXXXXXXX",
+    "hotjar": "XXXXXXXXXX"
+  },
+  "integrations": {
+    "newsletter": {
+      "provider": "mailchimp",
+      "apiKey": "your-api-key-here",
+      "audienceId": "your-audience-id"
+    },
+    "search": {
+      "provider": "algolia",
+      "appId": "your-app-id",
+      "apiKey": "your-api-key",
+      "indexName": "blogspace_posts"
+    }
+  },
+  "appearance": {
+    "theme": {
+      "primaryColor": "#3B82F6",
+      "secondaryColor": "#8B5CF6",
+      "accentColor": "#10B981",
+      "fontFamily": {
+        "sans": ["Inter", "system-ui", "sans-serif"],
+        "serif": ["Georgia", "serif"],
+        "mono": ["Fira Code", "monospace"]
+      }
+    },
+    "layout": {
+      "containerMaxWidth": "1280px",
+      "sidebar": {
+        "enabled": true,
+        "position": "right"
+      }
+    }
+  },
+  "content": {
+    "postsPerPage": 12,
+    "excerptLength": 160,
+    "dateFormat": "MMMM dd, yyyy",
+    "timeFormat": "hh:mm a",
+    "readingSpeed": 200,
+    "allowedFileTypes": ["jpg", "jpeg", "png", "gif", "webp", "svg"],
+    "maxFileSize": 5242880
+  },
+  "api": {
+    "baseUrl": "https://api.blogspace.example.com",
+    "version": "v1",
+    "rateLimit": {
+      "windowMs": 900000,
+      "max": 100
+    }
+  },
+  "maintenance": {
+    "mode": false,
+    "message": "We're currently performing maintenance. We'll be back soon!",
+    "scheduled": [
+      {
+        "start": "2024-01-15T02:00:00Z",
+        "end": "2024-01-15T04:00:00Z",
+        "description": "Database migration and performance improvements"
+      }
+    ]
+  }
+}

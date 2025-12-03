@@ -1,0 +1,101 @@
+{
+  "blog": {
+    "id": 2,
+    "slug": "entertainment",
+    "name": "Entertainment Blog",
+    "description": "Latest news and insights from the entertainment world",
+    "category": "entertainment",
+    "featured": true,
+    "color": "#8B5CF6",
+    "icon": "star",
+    "coverImage": "/image/entertainment/cover.png"
+  },
+  "posts": [
+    {
+      "id": 101,
+      "slug": "microsoft-rog-xbox-ally-default-game-profiles",
+      "title": "ROG Xbox Ally’s new profiles optimize performance per game for more battery life",
+      "excerpt": "The handheld will automatically apply game profiles to 40 supported games, optimizing FPS and power consumption.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Microsoft is previewing default game profiles on its ROG Xbox Ally gaming handheld. The new profiles will automatically optimize frame rates and power consumption for 40 games, including Fortnite, Gears of War: Reloaded, Hollow Knight: Silksong, Forza Horizon 5, Minecraft, and others, saving you from manually tweaking game settings."
+        },
+        {
+          "type": "paragraph",
+          "text": "The ROG Xbox Ally will automatically apply “per-game” profiles to supported titles when the handheld isn’t plugged in. Once a default profile is activated, the ROG Xbox Ally will boost frames per second (FPS) to help reach a specific target, “trading a bit of battery life for a smoother gameplay experience.” Conversely, the device will limit FPS to save power if the game is performing above the target level."
+        }
+      ],
+      "authorId": 3,
+      "tags": [
+        "ROG Xbox Ally",
+        "gaming handheld",
+        "game profiles",
+        "battery life",
+        "Microsoft"
+      ],
+      "publishedAt": "2025-11-25",
+      "readTime": 4,
+      "featured": true,
+      "stats": {
+        "views": 246,
+        "likes": 52
+      },
+      "featuredImage": {
+        "url": "/image/entertainment/id101/257996_ROG_Xbox_Ally_and_Xbox_Ally_X_AKrales_0021.png",
+        "alt": "CSS architecture diagram showing organization structure",
+        "credit": "Designed by author"
+      }
+    },
+    {
+      "id": 102,
+      "slug": "microsoft-xbox-full-screen-experience-pc-laptop-tablet-windows-insider",
+      "title": "You can now try the Xbox Full Screen Experience on any PC, laptop, or tablet",
+      "excerpt": "Previously, it was only available on PC handhelds.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Microsoft is bringing the Xbox Full Screen Experience (FSE), which adds a console-like UI while navigating through your game library on a PC with a controller, to laptops, desktops, and tablets. FSE launched with the Xbox Ally and Xbox Ally X, and it has so far only been available on PC handhelds."
+        },
+        {
+          "type": "paragraph",
+          "text": "The expansion to laptops, desktops, and tablets is available as part of new Windows Insider Preview Builds on the Dev and Beta channels and for people in the Xbox Insider Program. To turn on FSE on your PC, “hover over the Task View icon on your taskbar and choose Xbox full screen experience,” Microsoft says. “You can also open Xbox full screen experience in Game Bar > Settings or by pressing Win + F11 to toggle the experience.”"
+        },
+        {
+          "type": "image",
+          "url": "/image/entertainment/id102/11-21-25-Task-View-hover-with-cursor.png",
+          "alt": "11-21-25-Task-View-hover-with-cursor",
+          "caption": "Here’s what you’ll see when you hover over the Task View icon. Image: Microsoft"
+        },
+        {
+          "type": "paragraph",
+          "text": "However, even if you’re a Windows Insider, you may not have the access to FSE right away, as Microsoft says the feature is “gradually rolling out” with the new Windows Insider builds. It also requires that you have the Xbox app from the Microsoft store."
+        },
+        {
+          "type": "paragraph",
+          "text": "As of Friday, the company has started rolling out FSE to all Windows-based handhelds, too."
+        }
+      ],
+      "authorId": 1,
+      "tags": [
+        "Microsoft",
+        "Xbox Full Screen Experience",
+        "PC",
+        "laptop",
+        "tablet"
+      ],
+      "publishedAt": "2025-11-22",
+      "readTime": 9,
+      "featured": false,
+      "stats": {
+        "views": 634,
+        "likes": 45
+      },
+      "featuredImage": {
+        "url": "/image/entertainment/id102/Xbox-Wire-FSE-Blog-Image-0c875350f0217148a2fa-2048x1152-1.png",
+        "alt": "Diagram showing various accessibility features including keyboard navigation, screen readers, and color contrast",
+        "credit": "Accessibility illustration"
+      }
+    }
+  ]
+}

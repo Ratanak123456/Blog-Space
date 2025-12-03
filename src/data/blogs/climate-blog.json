@@ -1,0 +1,175 @@
+{
+  "blog": {
+    "id": 3,
+    "slug": "climate",
+    "name": "Climate Blog",
+    "description": "Insights and updates on climate change, sustainability, and environmental issues",
+    "category": "climate",
+    "featured": false,
+    "color": "#10B981",
+    "icon": "leaf",
+    "coverImage": "/image/climate/cover.png"
+  },
+  "posts": [
+    {
+      "id": 301,
+      "slug": "20251126-climate-change-increasingly-threatens-dynamic-spanish-economy-oecd",
+      "title": "Climate change 'increasingly threatens' dynamic Spanish economy: OECD",
+      "excerpt": "The consequences of climate change such as last year's deadly floods 'increasingly threaten' the growth of Spain's economy, one of the developed world's most dynamic, the OECD warned on Wednesday.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Spain has in recent years endured longer and more intense summer heatwaves, while fiercer autumn storms have drenched the country with torrential rain -- extreme weather events that scientists attribute to human-driven climate change."
+        },
+        {
+          "type": "paragraph",
+          "text": "'Rising temperatures, frequent and intense droughts, floods, heatwaves, and wildfires increasingly threaten the country's future growth, environment, and public health,' the Organisation for Economic Co-operation and Development said in a report."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Paris-based organisation said 'climate-related disasters have increasing economic costs' and that 'enhancing resilience will require targeted adaptation investments and robust infrastructure'."
+        },
+        {
+          "type": "paragraph",
+          "text": "The October 2024 floods killed more than 200 people and caused severe damage in the eastern region of Valencia, an industrial and agricultural motor of Spain's economy"
+        },
+        {
+          "type": "paragraph",
+          "text": "Faced with an increased flood risk, the OECD suggested 'restricting new development in high-risk flood zones, discouraging further exposure, and expanding flood protection infrastructure' to mitigate the damage."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spain has been outstripping its peers, recording 3.5 percent growth in 2024, and the economy is predicted to expand 2.9 percent this year -- more than double the eurozone forecast."
+        },
+        {
+          "type": "paragraph",
+          "text": "The OECD highlighted the contribution of migration to this performance but also the challenges of an ageing population and an unemployment rate of 10.45 percent, the European Union's highest."
+        },
+        {
+          "type": "paragraph",
+          "text": "The OECD said ' structural reforms' were needed to increase GDP per inhabitant and strengthen budget stability, pointing to the use of digital tools as artificial intelligence spreads."
+        }
+      ],
+      "authorId": 100,
+      "tags": [],
+      "publishedAt": "2025-11-26",
+      "readTime": 6,
+      "featured": true,
+      "stats": {
+        "views": 987,
+        "likes": 78
+      },
+      "featuredImage": {
+        "url": "/image/climate/id301/f4ba8e63eb3f906ed9c73d4c6f9fdc61f038fef5.png",
+        "alt": "Productivity tools on a developer's desk",
+        "credit": "OECD Report"
+      }
+    },
+    {
+      "id": 202,
+      "slug": "remote-work-best-practices",
+      "title": "Remote Work Best Practices for Developers",
+      "excerpt": "Learn how to thrive in a remote work environment with strategies for communication, time management, and maintaining work-life balance.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Remote work has become the new normal for many developers, but it comes with its own set of challenges and opportunities. Mastering remote work requires intentional habits and strategies."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Creating an Effective Workspace"
+        },
+        {
+          "type": "paragraph",
+          "text": "Your physical environment significantly impacts your productivity and well-being:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dedicate a specific area for work to create mental separation",
+            "Invest in ergonomic furniture - your back will thank you",
+            "Ensure good lighting to reduce eye strain",
+            "Minimize distractions and create boundaries with family/housemates"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Communication and Collaboration"
+        },
+        {
+          "type": "paragraph",
+          "text": "Effective communication is even more critical in remote settings:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Over-communicate rather than under-communicate",
+            "Use video calls for complex discussions",
+            "Document decisions and share meeting notes",
+            "Set clear expectations for response times"
+          ]
+        },
+        {
+          "type": "blockquote",
+          "text": "Remote work isn't about working alone—it's about working together, apart. The best remote teams communicate intentionally and frequently."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Maintaining Work-Life Balance"
+        },
+        {
+          "type": "paragraph",
+          "text": "Without the physical separation of office and home, boundaries can blur:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Establish clear start and end times for your workday",
+            "Take regular breaks and step away from your computer",
+            "Use time-blocking to separate work and personal time",
+            "Communicate your availability to your team clearly"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Remote work offers incredible flexibility, but it requires discipline and intentional habits to be sustainable long-term."
+        }
+      ],
+      "authorId": 6,
+      "tags": [
+        "remote-work",
+        "work-life-balance",
+        "communication",
+        "collaboration"
+      ],
+      "publishedAt": "2023-11-10",
+      "readTime": 5,
+      "featured": false,
+      "stats": {
+        "views": 845,
+        "likes": 63,
+        "comments": 18,
+        "shares": 29
+      },
+      "featuredImage": {
+        "url": "/images/blog/remote-work.jpg",
+        "alt": "Clean home office setup with laptop and plants",
+        "credit": "Remote workspace"
+      },
+      "seo": {
+        "metaTitle": "Remote Work Best Practices for Developers - Complete Guide",
+        "metaDescription": "Learn strategies for thriving in remote work environments with tips on communication, time management, and maintaining work-life balance.",
+        "keywords": [
+          "remote work",
+          "work from home",
+          "work-life balance",
+          "communication",
+          "collaboration"
+        ]
+      }
+    }
+  ]
+}

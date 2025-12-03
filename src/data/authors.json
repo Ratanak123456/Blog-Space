@@ -1,0 +1,34 @@
+{
+  "authors": [
+    {
+      "id": 1,
+      "slug": "jay-peters",
+      "name": "Jay Peters",
+      "role": "Senior Reporter"
+    },
+    {
+      "id": 2,
+      "slug": "emma-chapman",
+      "name": "Emma Chapman",
+      "role": "Business Owner"
+    },
+    {
+      "id": 3,
+      "slug": "emma-roth",
+      "name": "Emma Roth",
+      "role": "News Writer"
+    },
+    {
+      "id": 4,
+      "slug": "jake-peterson",
+      "name": "Jake Peterson",
+      "role": "Senior Technology Editor"
+    },
+    {
+      "id": 5,
+      "slug": "sean-hollister",
+      "name": "Sean Hollister",
+      "role": "Senior Editor at The Verge"
+    }
+  ]
+}

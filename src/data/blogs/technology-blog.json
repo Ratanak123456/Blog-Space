@@ -1,0 +1,137 @@
+{
+  "blog": {
+    "id": 1,
+    "slug": "technology",
+    "name": "Technology Blog",
+    "description": "Latest trends in web development, programming, and emerging technologies",
+    "category": "technology",
+    "featured": true,
+    "color": "#3B82F6",
+    "icon": "chip",
+    "coverImage": "/image/technology/cover.png"
+  },
+  "posts": [
+
+    {
+      "id": 1,
+      "slug": "save-100-on-a-playstation-5-ahead-of-black-friday",
+      "title": "You Can Save $100 on a PlayStation 5 Ahead of Black Friday",
+      "excerpt": "Amazon has the Digital Edition PS5 Slim for $399, offering great savings ahead of the holiday season.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "I'm historically a Nintendo guy. My first consoles were Game Boys; my first games starred Zelda and Link, and I was one of the few die-hard Wii U advocates. (There were dozens of us! Dozens!) But as much as Nintendo will forever be my go-to platform, I'll admit, some of my favorite recent gaming experiences have been on PlayStation. The Last of Us blew me away; Astro Bot was everything I would have wanted Super Mario Galaxy 3 to be; and, frankly, it's fantastic to have a device ready to play DVDs and Blu-Rays whenever I want to watch something on disc."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "How long do Black Friday deals really last?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Black Friday sales officially begin Friday, November 28, 2025, and run throughout \"Cyber Week,\" the five-day period that runs from Thanksgiving through Cyber Monday, December 1, 2025. But Black Friday and Cyber Monday dates have expanded as retailers compete for customers. You can get the same Black Friday sales early, and we expect sales to wind down by December 3, 2025."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Does Amazon have Black Friday deals?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Yes, Amazon has Black Friday sales, but prices aren't always what they seem. Use a price tracker to make sure you're getting the best deal, or refer to guides like our live blog that use price trackers for you. And if you have an Amazon Prime membership, make the most of it."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "What stores have the best sales on Black Friday?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nowadays, both large retailers and small businesses compete for Black Friday shoppers, so you can expect practically every store to run sales through Monday, December 1, 2025. The \"best\" sales depend on your needs, but in general, the biggest discounts tend to come from larger retailers who can afford lower prices: think places like Amazon, Walmart, Target, Best Buy, and Home Depot. You can find all the best sales from major retailers on our live blog."
+        }
+      ],
+      "authorId": 4,
+      "tags": ["gaming", "playstation", "deals", "black-friday", "consoles"],
+      "publishedAt": "2025-11-24",
+      "readTime": 8,
+      "featured": true,
+      "stats": {
+        "views": 1000,
+        "likes": 257
+      },
+      "featuredImage": {
+        "url": "/image/technology/image.png",
+        "alt": "PlayStation 5 console showing discount offer",
+        "credit": "Sony"
+      }
+    },
+
+    {
+      "id": 2,
+      "slug": "ram-memory-shortage-crunch-market-prices-central-micro-center",
+      "title": "RAM prices are so out of control that stores are selling it like lobster",
+      "excerpt": "Memory now commands market prices.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Michael Crider's headline at PCWorld today perfectly captures how ridiculous the PC memory shortage has become: stores like the San Francisco Bay Area's Central Computers are beginning to sell RAM at market prices, like you'd pay for the catch-of-the-day at a seafood restaurant."
+        },
+        {
+          "type": "paragraph",
+          "text": "“Costs are fluctuating daily as manufacturers and distributors adjust to limited supply and high demand,” reads a message posted in the store's display case, as spotted by Steve Lin. “Because of this, we can't display fixed prices at this time.”"
+        },
+        {
+          "type": "image",
+          "url": "/image/technology/id3/image.png",
+          "alt": "Micro Center RAM section with no price tags"
+        },
+        {
+          "type": "paragraph",
+          "text": "Micro Center is apparently doing the same: “Due to market volatility, we ask that you please see a Sales Associate for price,” reads an in-store message captured by Redditor CassTexas (via Tom’s Hardware)."
+        },
+        {
+          "type": "paragraph",
+          "text": "It’s hard to overstate just how quickly the RAM crunch is changing the affordability of computers — and it might soon impact other realms as well, as everything from game consoles to smartphones require RAM to function."
+        },
+        {
+          "type": "paragraph",
+          "text": "Three months ago yesterday, I bought 32GB of memory for my gaming PC and the price of that exact kit has more than tripled since then. It now costs $300 more. ($440 vs. $130, in case you’re curious; a more common version of the same kit went from $105 to $400.) Some prices have doubled since October, and while you can still find some 32GB kits for as low as $230, a 64GB DDR5 kit can easily run you $700, $800, even $900."
+        },
+        {
+          "type": "paragraph",
+          "text": "Three months ago yesterday, I bought 32GB of memory for my gaming PC and the price of that exact kit has more than tripled since then. It now costs $300 more. ($440 vs. $130, in case you’re curious; a more common version of the same kit went from $105 to $400.) Some prices have doubled since October, and while you can still find some 32GB kits for as low as $230, a 64GB DDR5 kit can easily run you $700, $800, even $900."
+        },
+        {
+          "type": "paragraph",
+          "text": "Some high-profile product launches might be impacted by the price of memory. Valve pointed to the RAM crunch as one reason it couldn’t promise a specific price for its Steam Machine just yet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Just as out-of-control GPU prices from earlier this year have finally settled down, runaway memory prices might make them shoot back up again. Every graphics card requires gobs of VRAM, more is better, and word is that Nvidia and AMD are preparing to raise prices to compensate for the crunch. Digital Foundry is recommending you buy a GPU at or below MSRP while you still can, one with 10GB or more of VRAM."
+        },
+        {
+          "type": "paragraph",
+          "text": "Leaker Moore’s Law Is Dead claims that Microsoft may have to raise Xbox prices yet again to compensate, but that Sony has stockpiled enough RAM for the PS5 to last some number of months."
+        },
+        {
+          "type": "paragraph",
+          "text": "Epic CEO Tim Sweeney says it may take years for high-end gaming to recover from the RAM crunch, because of AI. He says “factories are diverting leading edge DRAM capacity to meet AI needs where data centers are bidding far higher than consumer device makers.”"
+        }
+      ],
+      "authorId": 5,
+      "tags": ["Memory", "DRAM", "GPU", "RAM", "PC Hardware"],
+      "publishedAt": "2025-11-25",
+      "readTime": 10,
+      "featured": true,
+      "stats": {
+        "views": 2500,
+        "likes": 768
+      },
+      "featuredImage": {
+        "url": "/image/technology/id3/ram-memory-shortage-crunch-market-prices-central-micro-center.png",
+        "alt": "RAM modules on display at a computer hardware store",
+        "credit": "Sean Hollister"
+      } 
+    }
+  ]
+}

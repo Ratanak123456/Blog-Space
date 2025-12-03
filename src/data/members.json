@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Saren Ratanak",
+    "role": "Frontend Design",
+    "image": "/image/TeamMembers/sarenratanak.jpg",
+    "github": "https://github.com/Ratanak123456"
+  },
+  {
+    "id": 2,
+    "name": "Yin Wattana",
+    "role": "Frontend Design",
+    "image": "/image/TeamMembers/bongwatana.jpg",
+    "github": "https://github.com/Yinwattana"
+  },
+  {
+    "id": 3,
+    "name": "Tiv SokChea",
+    "role": "Frontend Design",
+    "image": "/image/TeamMembers/tivsokchea.jpg",
+    "github": "https://github.com/icanmakeit0k"
+  },
+  {
+    "id": 4,
+    "name": "Lorn Somnang",
+    "role": "Frontend Design",
+    "image": "/image/TeamMembers/somnang.png",
+    "github": "https://github.com/DeeChay03"
+  },
+  {
+    "id": 5,
+    "name": "Sim Sol",
+    "role": "Frontend Design",
+    "image": "/image/TeamMembers/simsol.jpg",
+    "github": "https://github.com/Mrrsol033"
+  },
+  {
+    "id": 6,
+    "name": "Heang Bunlong",
+    "role": "Frontend Design",
+    "image": "/image/TeamMembers/bunlong.jpg",
+    "github": "https://github.com/heangbunlong-zk"
+  }
+]

@@ -1,0 +1,210 @@
+{
+  "blog": {
+    "id": 4,
+    "slug": "lifestyle",
+    "name": "Lifestyle",
+    "description": "Tips and inspiration for a balanced and fulfilling lifestyle",
+    "category": "lifestyle",
+    "featured": false,
+    "color": "#F59E0B",
+    "icon": "heart",
+    "coverImage": "/image/lifestyle/cover.png"
+  },
+  "posts": [
+    {
+      "id": 201,
+      "slug": "pumpkin-spice-syrup-recipe",
+      "title": "Pumpkin Spice Syrup Recipe",
+      "excerpt": "Making homemade pumpkin spice syrup is easy and delicious. It’s the perfect addition to your homemade pumpkin spice latte.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Elsie and I have an inside joke about what we call the “pumpkin spice latte effect.” It’s our theory that right around the beginning of September, everybody gets a little bit nicer/more considerate/happy. Us included."
+        },
+        {
+          "type": "image",
+          "url": "/image/life/id201/pumpkin-spice-latte-syrup-730x730.png",
+          "alt": "pumpkin-spice-latte-syrup-730x730",
+          "credit": "Redditor CassTexas"
+        },
+        {
+          "type": "paragraph",
+          "text": "We are for SURE affected by the PSL effect. So, of course, making your own pumpkin spice syrup at home is a great way to take advantage of this good vibes effect. And in case you need here’s how to make the best latte recipe at home with or without an espresso machine."
+        },
+        {
+          "type": "text",
+          "text": "I love to try coffee from just about anywhere, but I’m not above getting excited about PSL day at Starbucks! And, I think on a “deeper” level, somehow PSL day reminds us all that fall is in full swing."
+        },
+        {
+          "type": "paragraph",
+          "text": "Here in southern Missouri, that means cooler weather, hay rides, hot chocolate, apple picking, pumpkin carving, hot cider, layered clothing, and (most importantly) the holidays are on their way."
+        },
+        {
+          "type": "image",
+          "url": "/image/life/id201/pumpkin-spice-latte-syrup-recipe-1-1-730x1095.png",
+          "alt": "pumpkin-spice-latte-syrup-730x730"
+        },
+        {
+          "type": "paragraph",
+          "text": "I LOVE how this pumpkin spice syrup recipe turned out. I may have to make this a new tradition every year and create my own pumpkin spice latte effect. 🙂 Here’s my recipe, but feel free to adjust the spices to your own liking."
+        },
+        {
+          "type": "image",
+          "url": "/image/life/id201/6a00d8358081ff69e2019aff6a102e970b-800wi.png",
+          "alt": "pumpkin-spice-latte-syrup-730x730"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pumpkin Spice Syrup Ingredients"
+        },
+        {
+          "type": "list",
+          "items": [
+            "2 cups water",
+            "1 1/2 cups sugar",
+            "1/2 cup packed brown sugar",
+            "1 teaspoon cinnamon or 4-5 cinnamon sticks (I used half cinnamon and half cinnamon sticks)",
+            "1/2 teaspoon nutmeg",
+            "1/2 teaspoon ground ginger",
+            "1/2 teaspoon ground cloves (I go easy on the cloves, because I think they are such a strong flavor)",
+            "4 heaping tablespoons of pumpkin puree"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Directions"
+        },
+        {
+          "type": "paragraph",
+          "text": "In a pot, combine all the ingredients. Stir together over medium heat until the sugar has dissolved. Continue cooking over low/medium heat for an additional 5-6 minutes (do not allow to boil)."
+        },
+        {
+          "type": "image",
+          "url": "/image/life/id201/67a00d8358081ff69e2019aff6ac950970d-800wi.png",
+          "alt": "pumpkin-spice-latte-syrup-730x730"
+        },
+        {
+          "type": "paragraph",
+          "text": "Strain the mixture through a fine mesh strainer and store in an airtight container. You can keep the unused syrup in the refrigerator for up to two weeks. Be sure to give the syrup a good shake before reusing. Combine the coffee, psl syrup, and hot milk and enjoy!"
+        },
+        {
+          "type": "image",
+          "url": "/image/life/id201/pumpkin-spice-latte-syrup-recipe--730x984.png",
+          "alt": "pumpkin-spice-latte-syrup-730x730"
+        }
+      ],
+      "authorId": 2,
+      "tags": ["homemade", "pumpkin-spice", "recipe", "fall", "latte"],
+      "publishedAt": "2025-9-1",
+      "readTime": 7,
+      "featured": true,
+      "stats": {
+        "views": 2674,
+        "likes": 780
+      },
+      "featuredImage": {
+        "url": "/image/life/id201/PumpkinSpiceSyrup-6.png",
+        "alt": "pumpkin-spice-latte-syrup-730x730",
+        "credit": "Redditor CassTexas"
+      },
+      "seo": {
+        "metaTitle": "Pumpkin Spice Syrup Recipe - Homemade PSL",
+        "metaDescription": "Learn how to make delicious homemade pumpkin spice syrup for your lattes.",
+        "keywords": ["pumpkin spice", "syrup", "recipe", "homemade", "latte"]
+      }
+    },
+    {
+      "id": 202,
+      "slug": "thanksgiving-like-holidays-from-around-the-world",
+      "title": "Thanksgiving-Like Holidays From Around The World",
+      "excerpt": "Many cultures have their own versions of harvest festivals and days of gratitude.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "On November 27, 2025, most Americans will celebrate Thanksgiving with big feasts, parades, and 'Turkey Trot' races. Many other countries also have celebrations that honor gratitude, family, and the harvest. Here are four Thanksgiving-like festivities from around the world."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Chuseok (South Korea)"
+        },
+        {
+          "type": "image",
+          "url": "/image/life/id202/2560px-kocis_han-style_exhibitio.png",
+          "alt": "people_in_traditional_korean_clothing_during_chuseok",
+          "caption": "Songpyeon is a popular treat enjoyed by South Koreans during Chuseok (Credit: Korean Culture and Information Service / CC-BY-SA-2.0/ Wikimedia Commons)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Chuseok is an important harvest festival celebrated in South Korea. The annual holiday's date is determined by the lunar calendar. It usually falls between late September and early October. Koreans use the three-day break to travel to their hometowns to spend time with family and friends. They also visit the graves of their ancestors and offer foods like rice, fruit, and meat to show thanks. Traditional Korean foods are an important part of the holiday. One of the most popular is a half-moon-shaped rice cake called songpyeon. The sweet treat is filled with sesame seeds, red beans, or honey."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Erntedankfest (Germany)"
+        },
+        {
+          "type": "image",
+          "url": "/image/life/id202/2560px-niederwerth-_erntedankalt.png",
+          "alt": "erntedankfest_altar_in_niederwerth_germany",
+          "caption": "Church altar decorated with produce and an Erntekrone Credit: Rolf Kranz/ CC-BY-SA-4.0/ Wikimedia Commons)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Erntedankfest is Germany’s harvest festival of thanks. It is observed each year on the first Sunday in October. People attend church services, where altars are adorned with produce. One of the most eye-catching decorations is the Erntekrone, a crown made from grain decorated with flowers and fruit. It represents gratitude for the harvest. After the service, many towns hold parades and host fairs. Families often share a meal, but the holiday is largely about thanking nature and celebrating community."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Labor Thanksgiving Day (Japan)"
+        },
+        {
+          "type": "image",
+          "url": "/image/life/id202/482196776_1045375564289957_13693.png",
+          "alt": "erntedankfest_altar_in_niederwerth_germany",
+          "caption": "Labor Thanksgiving Day honors all Japanese workers (Credit: USArmy Japan/ Facebook)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Japan celebrates Kinro Kansha no Hi, or Labor Thanksgiving Day, every year on November 23. The holiday originates from an ancient rice festival. On this day, the Emperor of Japan would offer the season's first rice harvest to the gods and taste some himself."
+        },
+        {
+          "type": "paragraph",
+          "text": "After World War II, the holiday's purpose changed to honoring Japanese workers. On this day, children make thank-you cards for teachers and local workers. Communities hold ceremonies to show appreciation for the work they do throughout the year. While some areas hold small parades, the holiday largely focuses on gratitude and respect for labor."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Mid-Autumn Festival (China)"
+        },
+        {
+          "type": "image",
+          "url": "/image/life/id202/1599px-lanterns_at_mid-autumn_fe.png",
+          "alt": "lanterns_at_mid-autumn_festival_china",
+          "caption": "Lanterns are an important part of China's Mid-Autumn Festival (Credit: doctorho/ CC-BY-SA-2.0/ Wikimedia Commons)"
+        },
+        {
+          "type": "paragraph",
+          "text": "China's Mid-Autumn Festival is celebrated annually in September or October. Families gather to admire the full moon, which symbolizes unity and togetherness. They enjoy mooncakes — pastries filled with lotus seed paste, red beans, or salted egg yolks. Colorful lanterns are often released into the sky. Celebrations may also feature dragon dances or storytelling events. The festival is a time to enjoy delicious food and get together with loved ones."
+        }
+      ],
+      "authorId": 0,
+      "tags": ["thanksgiving", "holidays", "culture", "traditions", "world"],
+      "publishedAt": "2025-11-13",
+      "readTime": 10,
+      "featured": false,
+      "stats": {
+        "views": 612,
+        "likes": 54,
+        "comments": 15,
+        "shares": 23
+      },
+      "featuredImage": {
+        "url": "/image/life/id202/thanksgiving-celebration-traditi.png",
+        "alt": "thanksgiving-celebration-traditi"
+      }
+    }
+  ]
+}
