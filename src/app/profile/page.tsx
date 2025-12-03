@@ -9,6 +9,7 @@ import {
   Moon, Sun, TrendingUp, Filter
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ProfilePage() {
   const { data: session, status, update } = useSession();
@@ -93,6 +94,13 @@ export default function ProfilePage() {
     { id: 8, name: "Education", selected: false },
   ]);
 
+  // Get user data from session
+  const user = session?.user;
+  const userName = user?.name || "Reader";
+  const userEmail = user?.email || "";
+  const userImage = user?.image;
+  const userInitial = userName.charAt(0).toUpperCase();
+
   useEffect(() => {
     if (session?.user) {
       // Initialize user data
@@ -121,33 +129,33 @@ export default function ProfilePage() {
 
   if (status === "loading") {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-(--bg-primary)">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-(--accent)"></div>
+      <div className="min-h-screen flex items-center justify-center bg-[var(--bg-primary)]">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[var(--accent)]"></div>
       </div>
     );
   }
 
   if (status === "unauthenticated") {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-(--bg-primary)">
-        <div className="text-center max-w-md p-8 bg-(--bg-secondary) border border-(--border) rounded-xl">
-          <div className="w-16 h-16 bg-(--accent)/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Eye className="text-(--accent)" size={32} />
+      <div className="min-h-screen flex items-center justify-center bg-[var(--bg-primary)]">
+        <div className="text-center max-w-md p-8 bg-[var(--bg-secondary)] border border-[var(--border)] rounded-xl">
+          <div className="w-16 h-16 bg-[var(--accent)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Eye className="text-[var(--accent)]" size={32} />
           </div>
-          <h1 className="text-2xl font-bold text-(--text-primary) mb-4">Sign In to Continue</h1>
-          <p className="text-(--text-secondary) mb-6">
+          <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-4">Sign In to Continue</h1>
+          <p className="text-[var(--text-secondary)] mb-6">
             Sign in to track your reading history, save articles, and personalize your news feed.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link 
               href="/login"
-              className="inline-block bg-(--accent) text-white py-3 px-6 rounded-lg hover:bg-(--accent-hover) transition-colors text-center"
+              className="inline-block bg-[var(--accent)] text-white py-3 px-6 rounded-lg hover:bg-[var(--accent-hover)] transition-colors text-center"
             >
               Sign In
             </Link>
             <Link 
               href="/"
-              className="inline-block border border-(--border) py-3 px-6 rounded-lg hover:bg-(--bg-primary) transition-colors text-center"
+              className="inline-block border border-[var(--border)] py-3 px-6 rounded-lg hover:bg-[var(--bg-primary)] transition-colors text-center"
             >
               Browse Articles
             </Link>
@@ -158,22 +166,35 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="min-h-screen bg-(--bg-primary) text-(--text-primary)">
+    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)]">
       {/* Header */}
-      <div className="border-b border-(--border)">
+      <div className="border-b border-[var(--border)]">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="flex items-center gap-4">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-(--accent) to-amber-300 flex items-center justify-center text-white text-3xl font-bold">
-                {session?.user?.name?.charAt(0) || "U"}
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold">{session?.user?.name || "Reader"}</h1>
-                <div className="flex items-center gap-2 mt-1 text-(--text-secondary)">
-                  <Mail size={16} />
-                  <span>{session?.user?.email}</span>
+              {/* User Avatar - Real or Fallback */}
+              {userImage ? (
+                <Image
+                  src={userImage}
+                  alt={`${userName} Avatar`}
+                  width={80}
+                  height={80}
+                  unoptimized
+                  className="rounded-full border-2 border-[var(--accent)] object-cover shadow-md"
+                />
+              ) : (
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[var(--accent)] to-amber-300 flex items-center justify-center text-white text-3xl font-bold shadow-md">
+                  {userInitial}
                 </div>
-                <div className="flex items-center gap-2 mt-1 text-sm text-(--text-secondary)">
+              )}
+              
+              <div>
+                <h1 className="text-2xl font-bold">{userName}</h1>
+                <div className="flex items-center gap-2 mt-1 text-[var(--text-secondary)]">
+                  <Mail size={16} />
+                  <span>{userEmail}</span>
+                </div>
+                <div className="flex items-center gap-2 mt-1 text-sm text-[var(--text-secondary)]">
                   <Calendar size={14} />
                   <span>Joined January 2024</span>
                 </div>
@@ -182,14 +203,14 @@ export default function ProfilePage() {
             <div className="flex gap-3">
               <Link 
                 href="/"
-                className="flex items-center gap-2 border border-(--border) py-2 px-4 rounded-lg hover:bg-(--bg-secondary) transition-colors"
+                className="flex items-center gap-2 border border-[var(--border)] py-2 px-4 rounded-lg hover:bg-[var(--bg-secondary)] transition-colors"
               >
                 <Eye size={18} />
                 Continue Reading
               </Link>
               <button
                 onClick={() => {/* Handle sign out */}}
-                className="flex items-center gap-2 border border-(--border) py-2 px-4 rounded-lg hover:bg-(--bg-secondary) transition-colors"
+                className="flex items-center gap-2 border border-[var(--border)] py-2 px-4 rounded-lg hover:bg-[var(--bg-secondary)] transition-colors"
               >
                 <Settings size={18} />
                 Settings
@@ -205,47 +226,47 @@ export default function ProfilePage() {
           {/* Left Sidebar - Reading Stats */}
           <div className="lg:w-1/4 space-y-6">
             {/* Reading Statistics */}
-            <div className="bg-(--bg-secondary) border border-(--border) rounded-xl p-6">
+            <div className="bg-[var(--bg-secondary)] border border-[var(--border)] rounded-xl p-6">
               <h3 className="font-semibold mb-4 flex items-center gap-2">
                 <TrendingUp size={20} />
                 Reading Statistics
               </h3>
               <div className="space-y-4">
-                <div className="flex items-center justify-between p-3 bg-(--bg-primary) rounded-lg">
+                <div className="flex items-center justify-between p-3 bg-[var(--bg-primary)] rounded-lg">
                   <div className="flex items-center gap-3">
-                    <Eye className="text-(--accent)" size={20} />
+                    <Eye className="text-[var(--accent)]" size={20} />
                     <div>
-                      <div className="text-sm text-(--text-secondary)">Articles Read</div>
+                      <div className="text-sm text-[var(--text-secondary)]">Articles Read</div>
                       <div className="text-2xl font-bold">{readingStats.articlesRead}</div>
                     </div>
                   </div>
                 </div>
                 
-                <div className="flex items-center justify-between p-3 bg-(--bg-primary) rounded-lg">
+                <div className="flex items-center justify-between p-3 bg-[var(--bg-primary)] rounded-lg">
                   <div className="flex items-center gap-3">
-                    <Clock className="text-(--accent)" size={20} />
+                    <Clock className="text-[var(--accent)]" size={20} />
                     <div>
-                      <div className="text-sm text-(--text-secondary)">Total Reading Time</div>
+                      <div className="text-sm text-[var(--text-secondary)]">Total Reading Time</div>
                       <div className="text-2xl font-bold">{readingStats.readingTime}</div>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between p-3 bg-(--bg-primary) rounded-lg">
+                <div className="flex items-center justify-between p-3 bg-[var(--bg-primary)] rounded-lg">
                   <div className="flex items-center gap-3">
-                    <Bookmark className="text-(--accent)" size={20} />
+                    <Bookmark className="text-[var(--accent)]" size={20} />
                     <div>
-                      <div className="text-sm text-(--text-secondary)">Categories</div>
+                      <div className="text-sm text-[var(--text-secondary)]">Categories</div>
                       <div className="text-2xl font-bold">{readingStats.categoriesRead}</div>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between p-3 bg-(--bg-primary) rounded-lg">
+                <div className="flex items-center justify-between p-3 bg-[var(--bg-primary)] rounded-lg">
                   <div className="flex items-center gap-3">
-                    <History className="text-(--accent)" size={20} />
+                    <History className="text-[var(--accent)]" size={20} />
                     <div>
-                      <div className="text-sm text-(--text-secondary)">Day Streak</div>
+                      <div className="text-sm text-[var(--text-secondary)]">Day Streak</div>
                       <div className="text-2xl font-bold">{readingStats.streak} days</div>
                     </div>
                   </div>
@@ -254,13 +275,13 @@ export default function ProfilePage() {
             </div>
 
             {/* Reading Preferences */}
-            <div className="bg-(--bg-secondary) border border-(--border) rounded-xl p-6">
+            <div className="bg-[var(--bg-secondary)] border border-[var(--border)] rounded-xl p-6">
               <h3 className="font-semibold mb-4 flex items-center gap-2">
                 <Filter size={20} />
                 Content Preferences
               </h3>
               <div className="space-y-3">
-                <p className="text-sm text-(--text-secondary) mb-3">
+                <p className="text-sm text-[var(--text-secondary)] mb-3">
                   Select categories you're interested in:
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -270,8 +291,8 @@ export default function ProfilePage() {
                       onClick={() => toggleCategory(category.id)}
                       className={`px-3 py-1.5 rounded-full text-sm transition-colors ${
                         category.selected
-                          ? "bg-(--accent) text-white"
-                          : "bg-(--bg-primary) border border-(--border) text-(--text-secondary) hover:bg-(--bg-primary)"
+                          ? "bg-[var(--accent)] text-white"
+                          : "bg-[var(--bg-primary)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-primary)]"
                       }`}
                     >
                       {category.name}
@@ -282,26 +303,26 @@ export default function ProfilePage() {
             </div>
 
             {/* Quick Actions */}
-            <div className="bg-(--bg-secondary) border border-(--border) rounded-xl p-6">
+            <div className="bg-[var(--bg-secondary)] border border-[var(--border)] rounded-xl p-6">
               <h3 className="font-semibold mb-4">Quick Actions</h3>
               <div className="space-y-2">
                 <Link 
                   href="/"
-                  className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-(--bg-primary) transition-colors text-left"
+                  className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--bg-primary)] transition-colors text-left"
                 >
                   <Eye size={18} />
                   <span>Browse Articles</span>
                 </Link>
                 <button 
                   onClick={() => setActiveTab("saved")}
-                  className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-(--bg-primary) transition-colors text-left"
+                  className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--bg-primary)] transition-colors text-left"
                 >
                   <Bookmark size={18} />
                   <span>Saved Articles</span>
                 </button>
                 <button 
                   onClick={() => setActiveTab("preferences")}
-                  className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-(--bg-primary) transition-colors text-left"
+                  className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--bg-primary)] transition-colors text-left"
                 >
                   <Settings size={18} />
                   <span>Reader Settings</span>
@@ -313,8 +334,8 @@ export default function ProfilePage() {
           {/* Main Content Area */}
           <div className="lg:w-3/4">
             {/* Tabs */}
-            <div className="border-b border-(--border) mb-6">
-              <div className="flex space-x-8">
+            <div className="border-b border-[var(--border)] mb-6">
+              <div className="flex space-x-8 overflow-x-auto">
                 {[
                   { id: "reading-history", label: "Reading History", icon: History },
                   { id: "saved", label: "Saved Articles", icon: Bookmark },
@@ -324,10 +345,10 @@ export default function ProfilePage() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`flex items-center gap-2 py-3 px-1 font-medium transition-colors border-b-2 ${
+                    className={`flex items-center gap-2 py-3 px-1 font-medium transition-colors border-b-2 whitespace-nowrap ${
                       activeTab === tab.id
-                        ? "border-(--accent) text-(--accent)"
-                        : "border-transparent text-(--text-secondary) hover:text-(--text-primary)"
+                        ? "border-[var(--accent)] text-[var(--accent)]"
+                        : "border-transparent text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
                     }`}
                   >
                     <tab.icon size={18} />
@@ -339,21 +360,21 @@ export default function ProfilePage() {
 
             {/* Tab Content */}
             {activeTab === "reading-history" && (
-              <div className="bg-(--bg-secondary) border border-(--border) rounded-xl overflow-hidden">
-                <div className="p-6 border-b border-(--border)">
+              <div className="bg-[var(--bg-secondary)] border border-[var(--border)] rounded-xl overflow-hidden">
+                <div className="p-6 border-b border-[var(--border)]">
                   <h3 className="text-lg font-semibold">Recently Read Articles</h3>
-                  <p className="text-sm text-(--text-secondary) mt-1">
+                  <p className="text-sm text-[var(--text-secondary)] mt-1">
                     Track your reading journey and discover similar content
                   </p>
                 </div>
-                <div className="divide-y divide-(--border)">
+                <div className="divide-y divide-[var(--border)]">
                   {readingHistory.map((article) => (
-                    <div key={article.id} className="p-6 hover:bg-(--bg-primary)/50 transition-colors">
+                    <div key={article.id} className="p-6 hover:bg-[var(--bg-primary)]/50 transition-colors">
                       <div className="flex justify-between items-start">
                         <div className="flex-1">
                           <h4 className="font-semibold text-lg mb-2">{article.title}</h4>
-                          <div className="flex items-center gap-4 text-sm text-(--text-secondary) mb-3">
-                            <span className="px-2 py-1 bg-(--bg-primary) rounded-md">
+                          <div className="flex items-center gap-4 text-sm text-[var(--text-secondary)] mb-3">
+                            <span className="px-2 py-1 bg-[var(--bg-primary)] rounded-md">
                               {article.category}
                             </span>
                             <span>{article.readTime} read</span>
@@ -363,30 +384,30 @@ export default function ProfilePage() {
                         </div>
                         <button
                           onClick={() => toggleLike(article.id)}
-                          className="ml-4 p-2 hover:bg-(--bg-primary) rounded-lg transition-colors"
+                          className="ml-4 p-2 hover:bg-[var(--bg-primary)] rounded-lg transition-colors"
                         >
                           <Heart 
                             size={20} 
-                            className={article.liked ? "fill-red-500 text-red-500" : "text-(--text-secondary)"}
+                            className={article.liked ? "fill-red-500 text-red-500" : "text-[var(--text-secondary)]"}
                           />
                         </button>
                       </div>
                       <div className="flex gap-3 mt-4">
                         <Link 
                           href={`/article/${article.id}`}
-                          className="text-(--accent) hover:underline text-sm"
+                          className="text-[var(--accent)] hover:underline text-sm"
                         >
                           Read Again
                         </Link>
-                        <button className="text-(--accent) hover:underline text-sm">
+                        <button className="text-[var(--accent)] hover:underline text-sm">
                           Find Similar
                         </button>
                       </div>
                     </div>
                   ))}
                 </div>
-                <div className="p-6 border-t border-(--border)">
-                  <button className="w-full py-3 border border-(--border) rounded-lg hover:bg-(--bg-primary) transition-colors">
+                <div className="p-6 border-t border-[var(--border)]">
+                  <button className="w-full py-3 border border-[var(--border)] rounded-lg hover:bg-[var(--bg-primary)] transition-colors">
                     View All Reading History
                   </button>
                 </div>
@@ -394,28 +415,28 @@ export default function ProfilePage() {
             )}
 
             {activeTab === "saved" && (
-              <div className="bg-(--bg-secondary) border border-(--border) rounded-xl overflow-hidden">
-                <div className="p-6 border-b border-(--border)">
+              <div className="bg-[var(--bg-secondary)] border border-[var(--border)] rounded-xl overflow-hidden">
+                <div className="p-6 border-b border-[var(--border)]">
                   <div className="flex justify-between items-center">
                     <div>
                       <h3 className="text-lg font-semibold">Saved Articles</h3>
-                      <p className="text-sm text-(--text-secondary) mt-1">
+                      <p className="text-sm text-[var(--text-secondary)] mt-1">
                         Articles you've bookmarked for later reading
                       </p>
                     </div>
-                    <span className="text-sm text-(--text-secondary)">
+                    <span className="text-sm text-[var(--text-secondary)]">
                       {savedArticles.length} saved
                     </span>
                   </div>
                 </div>
-                <div className="divide-y divide-(--border)">
+                <div className="divide-y divide-[var(--border)]">
                   {savedArticles.map((article) => (
-                    <div key={article.id} className="p-6 hover:bg-(--bg-primary)/50 transition-colors">
+                    <div key={article.id} className="p-6 hover:bg-[var(--bg-primary)]/50 transition-colors">
                       <div className="flex justify-between items-start">
                         <div className="flex-1">
                           <h4 className="font-semibold text-lg mb-2">{article.title}</h4>
-                          <div className="flex items-center gap-4 text-sm text-(--text-secondary)">
-                            <span className="px-2 py-1 bg-(--bg-primary) rounded-md">
+                          <div className="flex items-center gap-4 text-sm text-[var(--text-secondary)]">
+                            <span className="px-2 py-1 bg-[var(--bg-primary)] rounded-md">
                               {article.category}
                             </span>
                             <span>Saved on {article.saveDate}</span>
@@ -424,13 +445,13 @@ export default function ProfilePage() {
                         <div className="flex gap-2 ml-4">
                           <Link 
                             href={`/article/${article.id}`}
-                            className="p-2 hover:bg-(--bg-primary) rounded-lg transition-colors text-(--accent)"
+                            className="p-2 hover:bg-[var(--bg-primary)] rounded-lg transition-colors text-[var(--accent)]"
                           >
                             Read Now
                           </Link>
                           <button
                             onClick={() => removeSavedArticle(article.id)}
-                            className="p-2 hover:bg-(--bg-primary) rounded-lg transition-colors text-(--text-secondary)"
+                            className="p-2 hover:bg-[var(--bg-primary)] rounded-lg transition-colors text-[var(--text-secondary)]"
                           >
                             Remove
                           </button>
@@ -441,14 +462,14 @@ export default function ProfilePage() {
                 </div>
                 {savedArticles.length === 0 && (
                   <div className="p-12 text-center">
-                    <Bookmark className="mx-auto text-(--text-secondary)" size={48} />
-                    <h4 className="mt-4 font-semibold text-(--text-secondary)">No saved articles yet</h4>
-                    <p className="text-(--text-secondary) mt-2">
+                    <Bookmark className="mx-auto text-[var(--text-secondary)]" size={48} />
+                    <h4 className="mt-4 font-semibold text-[var(--text-secondary)]">No saved articles yet</h4>
+                    <p className="text-[var(--text-secondary)] mt-2">
                       When you find articles you want to read later, click the bookmark icon to save them here.
                     </p>
                     <Link 
                       href="/"
-                      className="inline-block mt-4 bg-(--accent) text-white py-2 px-6 rounded-lg hover:bg-(--accent-hover) transition-colors"
+                      className="inline-block mt-4 bg-[var(--accent)] text-white py-2 px-6 rounded-lg hover:bg-[var(--accent-hover)] transition-colors"
                     >
                       Browse Articles
                     </Link>
@@ -458,11 +479,11 @@ export default function ProfilePage() {
             )}
 
             {activeTab === "preferences" && (
-              <div className="bg-(--bg-secondary) border border-(--border) rounded-xl p-6">
+              <div className="bg-[var(--bg-secondary)] border border-[var(--border)] rounded-xl p-6">
                 <h3 className="text-lg font-semibold mb-6">Reader Preferences</h3>
                 <div className="space-y-6">
                   {/* Theme Preference */}
-                  <div className="p-4 border border-(--border) rounded-lg">
+                  <div className="p-4 border border-[var(--border)] rounded-lg">
                     <h4 className="font-semibold mb-3 flex items-center gap-2">
                       {theme === "light" ? <Sun size={18} /> : <Moon size={18} />}
                       Theme Preference
@@ -472,8 +493,8 @@ export default function ProfilePage() {
                         onClick={() => setTheme("light")}
                         className={`flex-1 py-3 rounded-lg border transition-colors ${
                           theme === "light"
-                            ? "border-(--accent) bg-(--accent)/10"
-                            : "border-(--border) hover:bg-(--bg-primary)"
+                            ? "border-[var(--accent)] bg-[var(--accent)]/10"
+                            : "border-[var(--border)] hover:bg-[var(--bg-primary)]"
                         }`}
                       >
                         <Sun className="mx-auto mb-2" size={24} />
@@ -483,8 +504,8 @@ export default function ProfilePage() {
                         onClick={() => setTheme("dark")}
                         className={`flex-1 py-3 rounded-lg border transition-colors ${
                           theme === "dark"
-                            ? "border-(--accent) bg-(--accent)/10"
-                            : "border-(--border) hover:bg-(--bg-primary)"
+                            ? "border-[var(--accent)] bg-[var(--accent)]/10"
+                            : "border-[var(--border)] hover:bg-[var(--bg-primary)]"
                         }`}
                       >
                         <Moon className="mx-auto mb-2" size={24} />
@@ -494,41 +515,41 @@ export default function ProfilePage() {
                   </div>
 
                   {/* Reading Settings */}
-                  <div className="p-4 border border-(--border) rounded-lg">
+                  <div className="p-4 border border-[var(--border)] rounded-lg">
                     <h4 className="font-semibold mb-3">Reading Settings</h4>
                     <div className="space-y-3">
                       <label className="flex items-center gap-3 cursor-pointer">
-                        <input type="checkbox" className="rounded border-(--border)" defaultChecked />
+                        <input type="checkbox" className="rounded border-[var(--border)]" defaultChecked />
                         <span>Auto-save reading progress</span>
                       </label>
                       <label className="flex items-center gap-3 cursor-pointer">
-                        <input type="checkbox" className="rounded border-(--border)" defaultChecked />
+                        <input type="checkbox" className="rounded border-[var(--border)]" defaultChecked />
                         <span>Show estimated reading time</span>
                       </label>
                       <label className="flex items-center gap-3 cursor-pointer">
-                        <input type="checkbox" className="rounded border-(--border)" />
+                        <input type="checkbox" className="rounded border-[var(--border)]" />
                         <span>Auto-play related articles</span>
                       </label>
                     </div>
                   </div>
 
                   {/* Notification Settings */}
-                  <div className="p-4 border border-(--border) rounded-lg">
+                  <div className="p-4 border border-[var(--border)] rounded-lg">
                     <h4 className="font-semibold mb-3 flex items-center gap-2">
                       <Bell size={18} />
                       Notification Preferences
                     </h4>
                     <div className="space-y-3">
                       <label className="flex items-center gap-3 cursor-pointer">
-                        <input type="checkbox" className="rounded border-(--border)" defaultChecked />
+                        <input type="checkbox" className="rounded border-[var(--border)]" defaultChecked />
                         <span>Daily digest of top articles</span>
                       </label>
                       <label className="flex items-center gap-3 cursor-pointer">
-                        <input type="checkbox" className="rounded border-(--border)" />
+                        <input type="checkbox" className="rounded border-[var(--border)]" />
                         <span>New articles in followed categories</span>
                       </label>
                       <label className="flex items-center gap-3 cursor-pointer">
-                        <input type="checkbox" className="rounded border-(--border)" defaultChecked />
+                        <input type="checkbox" className="rounded border-[var(--border)]" defaultChecked />
                         <span>Weekly reading statistics</span>
                       </label>
                     </div>
@@ -538,39 +559,39 @@ export default function ProfilePage() {
             )}
 
             {activeTab === "account" && (
-              <div className="bg-(--bg-secondary) border border-(--border) rounded-xl p-6">
+              <div className="bg-[var(--bg-secondary)] border border-[var(--border)] rounded-xl p-6">
                 <h3 className="text-lg font-semibold mb-6">Account Settings</h3>
                 <div className="space-y-6">
-                  <div className="p-4 border border-(--border) rounded-lg">
+                  <div className="p-4 border border-[var(--border)] rounded-lg">
                     <h4 className="font-semibold mb-3">Personal Information</h4>
                     <div className="space-y-4">
                       <div>
-                        <label className="block text-sm text-(--text-secondary) mb-2">Name</label>
+                        <label className="block text-sm text-[var(--text-secondary)] mb-2">Name</label>
                         <input
                           type="text"
-                          defaultValue={session?.user?.name || ""}
-                          className="w-full p-3 border border-(--border) rounded-lg bg-(--bg-primary)"
+                          defaultValue={userName}
+                          className="w-full p-3 border border-[var(--border)] rounded-lg bg-[var(--bg-primary)]"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm text-(--text-secondary) mb-2">Email</label>
+                        <label className="block text-sm text-[var(--text-secondary)] mb-2">Email</label>
                         <input
                           type="email"
-                          defaultValue={session?.user?.email || ""}
-                          className="w-full p-3 border border-(--border) rounded-lg bg-(--bg-primary)"
+                          defaultValue={userEmail}
+                          className="w-full p-3 border border-[var(--border)] rounded-lg bg-[var(--bg-primary)]"
                           readOnly
                         />
                       </div>
                     </div>
                   </div>
 
-                  <div className="p-4 border border-(--border) rounded-lg">
+                  <div className="p-4 border border-[var(--border)] rounded-lg">
                     <h4 className="font-semibold mb-3 flex items-center gap-2">
                       <LogOut size={18} />
                       Account Actions
                     </h4>
                     <div className="flex flex-col sm:flex-row gap-3">
-                      <button className="py-3 px-6 border border-(--border) rounded-lg hover:bg-(--bg-primary) transition-colors">
+                      <button className="py-3 px-6 border border-[var(--border)] rounded-lg hover:bg-[var(--bg-primary)] transition-colors">
                         Export Reading Data
                       </button>
                       <button className="py-3 px-6 border border-red-200 text-red-600 rounded-lg hover:bg-red-50 transition-colors">

@@ -1,12 +1,14 @@
 import NextAuth from "next-auth";
 import type { NextAuthOptions, DefaultSession } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import GitHubProvider from "next-auth/providers/github";
+import GoogleProvider from "next-auth/providers/google";
 import fs from "fs";
 import path from "path";
 import * as bcrypt from "bcryptjs";
 
-// Path to your users.json
-const usersPath = path.join(process.cwd(), "src/data/users.json");
+// Path to your users.json (keep simsol update for authors.json)
+const usersPath = path.join(process.cwd(), "src/data/authors.json");
 
 interface User {
   id: number;
@@ -52,11 +54,11 @@ export const authOptions: NextAuthOptions = {
       async authorize(credentials) {
         if (!credentials?.email || !credentials.password) return null;
 
-        const users: User[] = JSON.parse(
+        const usersData: { authors: User[] } = JSON.parse(
           fs.readFileSync(usersPath, "utf-8")
         );
 
-        const user = users.find(
+        const user = usersData.authors.find(
           (u) => u.email === credentials.email
         );
 
@@ -72,6 +74,14 @@ export const authOptions: NextAuthOptions = {
           role: user.role,
         };
       },
+    }),
+    GitHubProvider({
+      clientId: process.env.GITHUB_ID!,
+      clientSecret: process.env.GITHUB_SECRET!,
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_ID!,
+      clientSecret: process.env.GOOGLE_SECRET!,
     }),
   ],
   session: { strategy: "jwt" },

@@ -3,6 +3,7 @@ import {
   X,
 } from "lucide-react";
 
+
 type BlogHeaderProps = {
   searchTerm: string;
   onSearchChange: (value: string) => void;

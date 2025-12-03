@@ -1,5 +1,6 @@
+
 import { NextResponse } from "next/server";
-import { promises as fs } from "fs";
+import fs from "fs";
 import path from "path";
 import * as bcrypt from "bcryptjs";
 
@@ -26,17 +27,12 @@ export async function POST(req: Request) {
 
     // Path to users.json
     const usersPath = path.join(process.cwd(), "src/data/users.json");
-    
-    let users: User[] = [];
-    try {
-      const usersData = await fs.readFile(usersPath, "utf-8");
-      users = JSON.parse(usersData);
-    } catch (error) {
-      // If the file does not exist or is empty, start with an empty array
-    }
+    const usersData: { users: User[] } = JSON.parse(
+      fs.readFileSync(usersPath, "utf-8")
+    );
 
     // Check if user already exists
-    if (users.find((u) => u.email === email)) {
+    if (usersData.users.find((u) => u.email === email)) {
       return NextResponse.json(
         { message: "User already exists." },
         { status: 400 }
@@ -48,7 +44,7 @@ export async function POST(req: Request) {
 
     // Create new user
     const newUser: User = {
-      id: users.length + 1,
+      id: usersData.users.length + 1,
       slug: name.toLowerCase().replace(/\s+/g, "-"),
       name,
       email,
@@ -57,8 +53,8 @@ export async function POST(req: Request) {
     };
 
     // Save user
-    users.push(newUser);
-    await fs.writeFile(usersPath, JSON.stringify(users, null, 2));
+    usersData.users.push(newUser);
+    fs.writeFileSync(usersPath, JSON.stringify(usersData, null, 2));
 
     return NextResponse.json(
       { message: "User created successfully." },
